@@ -58,7 +58,7 @@ def train_model(index):
 
     # set up random forest
     features = bm25 ** tfidf
-    rf = RandomForestRegressor(n_estimators = 400, random_state = 42, n_jobs = 2)
+    rf = RandomForestRegressor(n_estimators = 400, random_state = 42, n_jobs = 4)
     rf_pipe = features >> pt.ltr.apply_learned_model(rf)
     rf_pipe.fit(topics, labels)
 
