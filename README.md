@@ -4,4 +4,4 @@ The goal of this project is to use state of the art Learn to Rank methods to dev
 
 So far, it has been implemented on a limited course of about 20% of the bills introduced between 1993 and 2018. Credit for arranging this corpus goes to Anastassia Kornilova, who developed this collection for this paper on automatic summarization and generously made it available via [github](https://github.com/FiscalNote/BillSum) and [Kaggle](https://www.kaggle.com/datasets/akornilo/billsum).
 
-I have not yet created a frontend application to deliver this search. The <em>congress_search.py</em> implements this search engine for interaction via the terminal; the notebook file <em>developing_search.ipynb</em> demonstrates the process by which it was developed.
+I have not yet created a frontend application to deliver this search. The <em>congress_search.py</em> file implements this search engine for interaction via the terminal; the notebook file <em>developing_search.ipynb</em> demonstrates the process by which it was developed.
