@@ -53,7 +53,7 @@ def train_model(index):
     bm25 = pt.BatchRetrieve(index, wmodel = 'BM25')
     tfidf = pt.BatchRetrieve(index, wmodel = 'TF_IDF')
 
-    features_pipe = bm25 >> tfidf
+    features_pipe = tfidf >> bm25
     topics = features_pipe.transform(queries)
 
     # set up random forest
