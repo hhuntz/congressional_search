@@ -70,17 +70,17 @@ def get_results(query, bills_df, scorer, model):
     res_bills = results.merge(bills_df).sort_values(['rank'])
     return res_bills
 
-def search(bills, scorer, model):
+def search(bills, scorer, model, num_res = 5):
     # get query
     q = input('Enter a query or quit:\n')
     while q.strip().lower() != 'quit':
         # get results
         try:
             res = get_results(q, bills, scorer, model)
-            print(f'Top 5 results for "{q}":')
-            top3 = list(res.head(5).title)
-            for i in range(len(top3)):
-                print(f'{i+1}: {top3[i]}')
+            print(f'Top {num_res} results for "{q}":')
+            top_res = list(res.head(num_res).title)
+            for i in range(len(top_res)):
+                print(f'\t{i+1}: {top_res[i]}')
         except:
             print(f'No results for {q}')
 
